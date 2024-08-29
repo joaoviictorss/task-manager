@@ -1,8 +1,9 @@
-const express = require("express");
-const { getAll } = require('../controllers/taskController');
+const express = require('express');
+const { register, login } = require('../controllers/authController');
 
-const router = express.Router()
+const authRouter = express.Router();
 
-router.get('/tasks', getAll)
+authRouter.post('/register', register);
+authRouter.post('/login', login);
 
-module.exports = router
+module.exports = authRouter;

@@ -1,6 +1,6 @@
-const { getAll } = require("../models/tasksModel")
+const { getAllTasks } = require("../models/tasksModel")
 
-exports.getAll = async (req, res) => {
-  const tasks = await getAll()
+exports.getAllTasks = async (req, res) => {
+  const tasks = await getAllTasks()
   return res.status(200).json(tasks)
 }
